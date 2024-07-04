@@ -1,0 +1,863 @@
+
+/* Mengatur margin dan padding semua elemen menjadi 0 dan mengatur box-sizing agar termasuk padding dan border dalam ukuran elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Menghilangkan list-style (bullet points) pada elemen list, mengatur tampilan flex dan padding menjadi 0 */
+.main-nav, .auth-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+
+/* Mengatur padding pada elemen list menjadi 0 */
+.main-nav li, .auth-nav li {
+    padding: 0 0px;
+}
+
+
+/* Mengatur margin kiri elemen auth-nav sehingga elemen terdorong ke kanan (alignment otomatis) */
+.auth-nav {
+    margin-left: auto; 
+}
+
+
+/* Mengatur ukuran, margin, dan background image banner dengan gradien linear dan gambar */
+.banner {
+    width: 100%;
+    height: 110vh;
+    margin: 0;
+    background-image: linear-gradient(rgba(52, 5, 60, 0.75),rgba(17, 4, 69, 0.5)),url(images/jkt48.jpeg);
+}
+
+
+/* Mengaktifkan perilaku scroll yang halus pada seluruh dokumen HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mengatur ukuran, margin, padding, dan tata letak navbar agar elemen di dalamnya sejajar di tengah */
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    transition: position 0.3s ease;
+}
+
+.navbar-static {
+    position: static;
+}
+
+
+/* Mengatur teks navbar-auth ke kanan, warna latar belakang, dan tata letak elemen dengan jarak 10px di antara mereka serta ukuran font 16px */
+.navbar-auth {
+    text-align: right;
+    background-color: transparent;
+    align-items: center;
+    gap: 10px; /* Atur jarak antar elemen */
+    font-size: 16px; /* Sesuaikan ukuran teks */
+}
+
+
+/* Menghilangkan garis bawah pada tautan dan mengatur warna teks menjadi putih */
+.navbar-auth a {
+    text-decoration: none;
+    color: #fff; /* Ubah sesuai dengan skema warna  */
+}
+
+.navbar-auth a {
+    text-decoration: none; /* Menghapus garis bawah default */
+    color: rgb(255, 244, 244); /* Warna teks */
+    position: relative; /* Menambahkan posisi relatif untuk elemen a */
+}
+
+.navbar-auth a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Menempatkan garis bawah tepat di bawah teks */
+    width: 100%;
+    height: 1px; /* Ketebalan garis bawah */
+    background-color: rgb(227, 224, 224); /* Warna garis bawah */
+}
+
+/* Mengatur ukuran, font-size, dan warna teks pada elemen logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Gaya umum untuk semua logo */
+.logo1 {
+    width: 50px;
+    height: 50px;
+    margin: 0 7px;
+}
+
+/* Menghilangkan list-style, menampilkan elemen secara inline-block dengan margin 15px, dan mengatur posisi relatif */
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+
+/* Menghilangkan garis bawah pada tautan, mengatur warna teks, dan mengubah teks menjadi huruf besar */
+.navbar ul li a {
+    text-decoration: none;
+    color: #ebe5e5;
+    text-transform: uppercase;
+}
+
+
+/* Mengatur warna teks menjadi putih saat tautan dihover */
+.navbar ul li a:hover {
+    color: white;
+}
+
+
+/* Menambahkan garis bawah animasi pada elemen list saat dihover */
+.navbar ul li::after{
+    content: '';
+    height: 1px;
+    width: 0;
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+
+/* Memperluas garis bawah animasi pada elemen list saat dihover */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+
+/* Mengatur ukuran, posisi, warna teks, dan penempatan teks pada elemen content di tengah secara vertikal */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Mengatur ukuran font dan margin atas pada elemen h1 dalam content */
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+
+/* Mengatur margin, ketebalan font, dan tinggi baris pada elemen p dalam content */
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+
+}
+
+
+/* Mengatur ukuran, padding, teks, margin, border-radius, ketebalan font, border, background, warna teks, kursor, dan posisi pada tombol */
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #2c83a5;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Mengatur latar belakang, ukuran, border-radius, posisi, dan transisi pada elemen span dalam tombol */
+span {
+    background: #4a9cbc;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+
+/* Mengatur lebar elemen span menjadi 100% saat tombol dihover */
+button:hover span {
+    width: 100%;
+}
+
+
+/* Menghilangkan border pada tombol saat dihover */
+button:hover {
+    border: none;
+}
+
+
+/* Mengatur ukuran, tampilan, penempatan teks, margin, opacity, transformasi, dan transisi pada elemen heading */
+.heading {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+}
+
+
+/* Mengatur opacity dan transformasi untuk elemen yang memiliki kelas visible */
+.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
+/* Mengatur ukuran font, warna teks, margin bawah, dan posisi pada elemen h1 dalam heading */
+.heading h1{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+
+/* Menambahkan garis bawah dekoratif pada elemen h1 dalam heading */
+.heading h1::after {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+
+/* Mengatur ukuran font, warna teks, dan margin bawah pada elemen p dalam heading */
+.heading p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+
+/* Mengatur ukuran, margin, dan padding pada elemen container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+
+/* Mengatur tampilan, penempatan elemen, dan fleksibilitas wrapping pada elemen about */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Mengatur ukuran, margin, dan overflow pada elemen youtube-embed */
+.youtube-embed{
+    flex:1;
+    margin-right: 40px;
+    overflow:hidden;
+}
+
+
+/* Mengatur fleksibilitas ukuran pada elemen about-content */
+.about-content{
+    flex: 1;
+}
+
+
+/* Mengatur ukuran font, margin bawah, dan warna teks pada elemen h2 dalam about-content */
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+
+/* Mengatur ukuran font, tinggi baris, dan warna teks pada elemen p dalam about-content */
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+
+/* Mengatur tampilan, padding, warna latar belakang, warna teks, ukuran font, dekorasi teks, border-radius, margin atas, dan transisi pada elemen dengan kelas read-more */
+.about-content .read-more{
+    display: inline-block;
+    padding:10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+
+/* Mengatur warna latar belakang menjadi putih saat elemen dengan kelas read-more dihover */
+.about-content .read-more:hover {
+    background-color: #fff;
+}
+
+
+/* Mengatur tampilan responsif untuk layar dengan lebar maksimal 768px */
+@media screen and (max-width: 768px){
+    .heading{
+        padding: 0px 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .youtube-embed{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding: 0px;
+        font-stretch: 16px;
+    }
+    .about-content .read-more{
+        font-size: 16px;
+
+    }
+}
+
+/* Mengatur ukuran, tampilan, penempatan elemen, margin, overflow, posisi, dan tinggi minimum pada elemen imagesjkt */
+.imagesjkt {
+    max-width: 1325px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    min-height: 70vh;
+}
+
+
+/* Mengatur tampilan grid, jarak antar elemen, ukuran font, margin bawah, overflow horizontal, dan jumlah kolom pada elemen image-list dalam slider-wrapper */
+.slider-wrapper .image-list {
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 45px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+
+/* Menghilangkan scrollbar pada elemen image-list dalam slider-wrapper pada browser berbasis Webkit */
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Mengatur ukuran dan tampilan gambar pada elemen image-item dalam image-list pada slider-wrapper */
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+
+/* Mengatur tampilan flex dan transisi transformasi pada elemen image-list */
+.image-list {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+
+
+/* Mengatur lebar minimum elemen image-item menjadi 100% */
+.image-item {
+    min-width: 100%;
+}
+
+
+/* Mengatur posisi, tampilan, warna latar belakang, warna teks, border, kursor, padding, dan z-index pada tombol prev dan next */
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1px;
+    z-index: 100;
+}
+
+
+/* Mengatur posisi, tampilan, warna latar belakang, border, kursor, dan z-index pada tombol prev dan next */
+.btn-prev, .btn-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+/* Mengatur tampilan dan ukuran gambar dalam tombol prev dan next */
+.btn-prev img, .btn-next img {
+    display: block;
+    width: 100%; 
+    height: auto;
+}
+
+
+/* Mengatur posisi kiri, lebar, dan tinggi tombol prev */
+.btn-prev {
+    left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Mengatur posisi kanan, lebar, dan tinggi tombol next */
+.btn-next {
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Mengatur transformasi gambar dalam tombol prev agar tampak terbalik secara horizontal */
+.btn-prev img {
+    transform: scaleX(-1); 
+}
+
+
+/* Mengatur opacity dan transformasi untuk elemen yang memiliki kelas visible dengan prioritas tinggi */
+.visible {
+    opacity: 1 !important; 
+    transform: translateY(0) !important; 
+}
+
+
+/* Mengatur transisi opacity dan transformasi serta nilai awal opacity dan transformasi pada elemen about-content */
+.about-content {
+    transition: opacity 2s ease, transform 1s ease; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    will-change: opacity, transform; 
+}
+
+
+/* Mengatur ukuran, margin, padding, bayangan, border-radius, font, tinggi baris, dan teks terpusat pada elemen container-stats */
+.container-stats {
+    max-width: 1100px;
+    margin:  auto;
+    padding: 100px;
+    box-shadow: 0 10px 1px 0 rgba(191, 0, 0, 0.956);
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    text-align: center;
+}
+
+
+/* Mengatur tampilan flex, penempatan elemen, dan margin bawah pada elemen stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+/* Mengatur teks agar berada di tengah pada elemen stat */
+.stat {
+    text-align: center;
+}
+
+
+/* Mengatur ketebalan font, ukuran font, dan margin bawah pada elemen stat-label */
+.stat-label {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+
+/* Mengatur margin, font, ukuran font, Tinggi baris, overflow, animasi mengetik, dan warna latar belakang pada elemen description */
+.description {
+    margin: 20px 0;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0;
+    overflow: hidden;
+    animation: typing 5s steps(600, end), blink-caret .75s step-end infinite;
+    background-color: transparent; 
+}
+
+
+/* Mengatur ukuran font, ketebalan font, dan warna teks pada elemen stat-value */
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+/* Membuat animasi fadeOut yang mengatur perubahan opacity dari 0 menjadi 1 */
+@keyframes fadeOut {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Mengatur animasi fadeOut pada elemen yang memiliki kelas animate-fadeOut */
+.animate-fadeOut {
+    animation: fadeOut 5s ease forwards;
+}
+
+
+/* Mengatur border, tinggi, warna latar belakang, dan margin pada elemen custom-line */
+.custom-line {
+    border: none; 
+    height: 1px; 
+    background-color: #ffffff; 
+    margin: 2px 0;
+}
+
+
+/* Mengatur font-face untuk menggunakan font khusus */
+@font-face {
+    font-family: 'MyDigitalFont';
+    src: url('path/to/your/font-file.woff') format('woff');
+    
+}
+
+
+/* Mengatur font, ukuran font, dan warna teks pada elemen dengan id date-time */
+#date-time {
+    font-family: 'Your Digital Font', sans-serif;
+    font-size: 24px; 
+    color: rgb(183, 180, 180); 
+}
+
+
+/* Mengatur ukuran, margin, padding atas, dan teks terpusat pada elemen vision-mission */
+.vision-mission {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* Mengatur tampilan blok, ukuran font, ketebalan font, dan margin bawah pada elemen span dalam data-anchor */
+.data-anchor span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Mengatur ukuran font, ketebalan font, dan warna teks pada elemen stat-vision */
+.stat-vision {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+
+
+/* Mengatur ukuran font, teks rata, ketebalan font, warna teks, dan penempatan akhir teks pada elemen fade */
+.fade {
+    font-size: 20px;
+    text-align: justify;
+    font-weight: normal;
+    color: white;
+    text-align-last: center;
+}
+
+footer{
+    /* height:200px; */
+    margin-top: 20px; /* Menambahkan margin atas sebesar 20px */
+    background-color: rgb(44, 44, 44); /* Mengatur warna latar belakang footer menjadi hitam */
+}
+
+.footer{
+    color: aliceblue; /* Mengatur warna teks footer menjadi putih kebiruan */
+    text-align: center; /* Mengatur teks dalam footer agar rata tengah */
+    padding: 20px; /* Menambahkan padding sebesar 20px di semua sisi */
+    padding-left: 133px; /* Menambahkan padding kiri negatif untuk menyesuaikan layout */
+    display: flex; /* Mengatur konten menggunakan flexbox */
+    flex-wrap: nowrap; /* Membuat konten tidak membungkus ke baris baru */
+    margin-top: 8px; /* Menambahkan margin atas sebesar 100px */
+}
+
+.buttons{
+    text-align: center; /* Mengatur teks dalam buttons agar rata tengah */
+}
+
+.month{
+    text-align: center; /* Mengatur teks dalam month agar rata tengah */
+}
+
+.ig{
+    text-align: center; /* Mengatur teks dalam ig agar rata tengah */
+}
+
+.logofot{
+    height: 150px; /* Mengatur tinggi logo footer */
+    width: auto; /* Mengatur lebar logo footer secara otomatis sesuai aspek rasio */
+}
+
+a{
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: aliceblue; /* Mengatur warna teks link menjadi putih kebiruan */
+}
+
+.tabel{
+    width: 75%; /* Mengatur lebar tabel menjadi 75% dari kontainer induknya */
+}
+
+.logo{
+    width: 15%; /* Mengatur lebar logo menjadi 15% dari kontainer induknya */
+    margin-right: 50px; /* Menambahkan margin kanan sebesar 50px */
+}
+
+.igdkk{
+    padding-bottom: 70px; /* Menambahkan padding bawah sebesar 70px */
+}
+
+footer a:hover{
+    color: aqua; /* Mengubah warna teks link dalam footer menjadi aqua saat hover */
+}
+
+
+/* Mengatur tampilan flex dan penempatan elemen pada elemen row */
+.row {
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+/* Mengatur fleksibilitas ukuran elemen kolom */
+.col {
+    flex: 10; 
+}
+
+
+/* Mengatur tampilan blok inline dan teks terpusat pada elemen tautan dalam kolom */
+.col a {
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* Mengatur warna latar belakang dan warna teks pada elemen dengan id contact */
+#contact {
+    background-color: #2B3035;
+    color: #fff; 
+  }
+
+
+/* Mengatur padding sebesar 0.5 rem pada elemen dengan kelas p-2 */
+.p-2 {
+  padding: 0.5rem; 
+}
+
+
+/* Mengatur warna teks menjadi putih pada elemen dengan kelas text-white */
+.text-white {
+  color: #fff; 
+}
+
+
+/* Mengatur tampilan modal agar tidak ditampilkan secara default, posisi tetap, z-index, ukuran, overflow, dan warna latar belakang */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+/* Mengatur warna latar belakang, margin, padding, border, dan ukuran modal-content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+/* Mengatur warna teks, posisi mengambang, ukuran font, dan ketebalan font pada elemen close */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+/* Mengatur warna teks, dekorasi teks, dan kursor pada elemen close saat dalam fokus */
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Mengatur warna latar belakang dan bayangan pada elemen banner */
+.banner {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Mengatur tampilan header */
+.header {
+    position: sticky;
+    background-color: transparent;
+    z-index: 1000;
+    padding: 13px 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+.login {
+    text-align: left;
+}
+
+/* Mengatur tampilan header ketika menempel */
+.header.sticky {
+    background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang semi-transparan */
+    padding: 8px 0; /* Padding yang lebih kecil saat menempel */
+}
+
+/* Mengatur tampilan flex, penempatan elemen, dan padding pada elemen navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 0px;
+}   
+
+
+/* Mengatur tampilan vertikal gambar pada elemen logo */
+.logo img {
+    vertical-align: middle;
+}
+
+
+/* Mengatur tampilan daftar, margin, padding, dan tampilan flex pada elemen ul dalam navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Mengatur margin pada elemen li dalam navbar */
+.navbar ul li {
+    margin: 0 10px;
+}
+
+
+/* Mengatur dekorasi teks, warna teks, padding, border-radius, dan transisi warna latar belakang pada elemen tautan dalam navbar */
+.navbar ul li a {
+    text-decoration: none;
+    color: #f2eeee;
+    padding: 8px 12px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+/* Mengatur warna latar belakang pada elemen tautan dalam navbar saat dihover */
+.navbar ul li a:hover {
+    background-color: #a49c9c;
+}
+
+/* Style for the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

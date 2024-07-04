@@ -1,0 +1,200 @@
+footer{
+    /* height:200px; */
+    margin-top: 20px; /* Menambahkan margin atas sebesar 20px */
+}
+
+.footer{
+    color: aliceblue; /* Mengatur warna teks footer menjadi putih kebiruan */
+    text-align: center; /* Mengatur teks dalam footer agar rata tengah */
+    padding: 20px; /* Menambahkan padding sebesar 20px di semua sisi */
+    padding-left: 133px; /* Menambahkan padding kiri negatif untuk menyesuaikan layout */
+    display: flex; /* Mengatur konten menggunakan flexbox */
+    flex-wrap: nowrap; /* Membuat konten tidak membungkus ke baris baru */
+    margin-top: 8px; /* Menambahkan margin atas sebesar 100px */
+}
+
+.buttons{
+    text-align: center; /* Mengatur teks dalam buttons agar rata tengah */
+}
+
+.month{
+    text-align: center; /* Mengatur teks dalam month agar rata tengah */
+}
+
+.ig{
+    text-align: center; /* Mengatur teks dalam ig agar rata tengah */
+}
+
+.logofot{
+    height: 150px; /* Mengatur tinggi logo footer */
+    width: auto; /* Mengatur lebar logo footer secara otomatis sesuai aspek rasio */
+}
+
+a{
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: aliceblue; /* Mengatur warna teks link menjadi putih kebiruan */
+}
+
+.tabel{
+    width: 75%; /* Mengatur lebar tabel menjadi 75% dari kontainer induknya */
+}
+
+.logo{
+    width: 15%; /* Mengatur lebar logo menjadi 15% dari kontainer induknya */
+    margin-right: 50px; /* Menambahkan margin kanan sebesar 50px */
+}
+
+.igdkk{
+    padding-bottom: 70px; /* Menambahkan padding bawah sebesar 70px */
+}
+
+footer a:hover{
+    color: aqua; /* Mengubah warna teks link dalam footer menjadi aqua saat hover */
+}
+
+/* Mengimpor font Poppins dengan berbagai ketebalan dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif; /* Mengatur font default menjadi Poppins */
+  margin: 0; padding: 0; /* Menghilangkan margin dan padding default pada semua elemen */
+  box-sizing: border-box; /* Memastikan padding dan border dimasukkan dalam ukuran elemen */
+  outline: none; border: none; /* Menghilangkan outline dan border default */
+  text-transform: capitalize; /* Mengubah huruf pertama setiap kata menjadi huruf kapital */
+  transition: all .2s linear; /* Menambahkan transisi untuk semua properti dengan durasi 0.2 detik */
+}
+
+.container__popup form {
+  padding: 20px; /* Padding di dalam form */
+  width: 700px; /* Lebar form 700px */
+  background: #fff; /* Latar belakang putih */
+  box-shadow: 0 5px 10px rgba(0,0,0,.1); /* Bayangan pada form */
+}
+
+.container__popup form .row {
+  display: flex; /* Mengatur layout flexbox pada row */
+  flex-wrap: wrap; /* Membungkus item jika melebihi lebar container */
+  gap: 15px; /* Jarak antar item 15px */
+}
+
+.container__popup form .row .col {
+  flex: 1 1 250px; /* Kolom dengan lebar minimum 250px dan fleksibel */
+}
+
+.container__popup form .row .col .title {
+  font-size: 20px; /* Ukuran font 20px */
+  color: #333; /* Warna teks abu-abu gelap */
+  padding-bottom: 5px; /* Padding bawah 5px */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+}
+
+.container__popup form .row .col .inputBox {
+  margin: 15px 0; /* Margin vertikal 15px */
+}
+
+.container__popup form .row .col .inputBox span {
+  margin-bottom: 10px; /* Margin bawah 10px */
+  display: block; /* Menampilkan elemen sebagai blok */
+}
+
+.container__popup form .row .col .inputBox input {
+  width: 100%; /* Lebar penuh input */
+  border: 1px solid #ccc; /* Border abu-abu */
+  padding: 10px 15px; /* Padding di dalam input */
+  font-size: 15px; /* Ukuran font 15px */
+  text-transform: none; /* Tidak mengubah teks input */
+}
+
+.container__popup form .row .col .inputBox input:focus {
+  border: 1px solid #000; /* Border hitam saat input fokus */
+}
+
+.container__popup form .row .col .flex {
+  display: flex; /* Mengatur layout flexbox pada flex */
+  gap: 15px; /* Jarak antar item 15px */
+}
+
+.container__popup form .row .col .flex .inputBox {
+  margin-top: 5px; /* Margin atas 5px */
+}
+
+.container__popup form .row .col .inputBox img {
+  height: 34px; /* Tinggi gambar 34px */
+  margin-top: 5px; /* Margin atas 5px */
+  filter: drop-shadow(0 0 1px #000); /* Efek bayangan pada gambar */
+}
+
+.container__popup form .submit-btn {
+  width: 100%; /* Lebar penuh tombol submit */
+  padding: 12px; /* Padding di dalam tombol */
+  font-size: 17px; /* Ukuran font 17px */
+  background: red; /* Latar belakang merah */
+  color: #fff; /* Warna teks putih */
+  margin-top: 5px; /* Margin atas 5px */
+  cursor: pointer; /* Kursor pointer */
+}
+
+.container__popup form .submit-btn:hover {
+  background: #cc2eb2; /* Latar belakang merah muda saat hover */
+}
+
+/* POP UP */
+
+.container__popup {
+  width: 100%; /* Lebar penuh container */
+  height: 100vh; /* Tinggi penuh viewport */
+  background-color: rgba(0,0,0,.8); /* Latar belakang semi-transparan hitam */
+  position: fixed; /* Posisi tetap di layar */
+  top: 0; /* Menempel di atas */
+  left: 0; /* Menempel di kiri */
+  opacity: 0; /* Transparan awal */
+  visibility: hidden; /* Tersembunyi awal */
+  transition: all .3s; /* Transisi untuk semua properti dalam 0.3 detik */
+}
+
+.container__popup {
+  text-align: center; /* Teks rata tengah */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+  color: #555; /* Warna teks abu-abu */
+  margin-bottom: 36px; /* Margin bawah 36px */
+}
+
+.popup__content {
+  width: 50%; /* Lebar konten pop-up 50% */
+  background-color: #fff; /* Latar belakang putih */
+  box-shadow: 0 20px 40px rgba(0,0,0,.2); /* Bayangan pada konten pop-up */
+  position: absolute; /* Posisi absolut */
+  top: 50%; /* Menempel di tengah vertikal */
+  left: 50%; /* Menempel di tengah horizontal */
+  transform: translate(-50%, -50%) scale(.25); /* Menyusutkan dan memposisikan ke tengah */
+  opacity: 0; /* Transparan awal */
+  transition: all .5s .1s; /* Transisi untuk semua properti dalam 0.5 detik dengan delay 0.1 detik */
+}
+
+#popup:target {
+  opacity: 1; /* Menjadi opak saat ditarget */
+  visibility: visible; /* Menjadi terlihat saat ditarget */
+}
+
+#popup:target .popup__content {
+  opacity: 1; /* Menjadi opak saat ditarget */
+  transform: translate(-50%, -50%) scale(1); /* Mengubah ukuran ke normal saat ditarget */
+}
+
+.popup__close:link,
+.popup__close:visited {
+  position: absolute; /* Posisi absolut */
+  top: 12px; /* Jarak dari atas 12px */
+  right: 20px; /* Jarak dari kanan 20px */
+  text-decoration: none; /* Menghilangkan dekorasi teks */
+  color: #000; /* Warna teks hitam */
+  font-size: 30px; /* Ukuran font 30px */
+  display: inline-block; /* Menampilkan elemen sebagai blok sebaris */
+  line-height: 1; /* Tinggi baris 1 */
+  transition: all .3s; /* Transisi untuk semua properti dalam 0.3 detik */
+}
+
+.popup__close:hover,
+.popup__close:active {
+  color: #555; /* Warna teks abu-abu saat hover atau aktif */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <section>
+        <form action="login.php" method="POST">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" name="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" name="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="forget">
+                <label for=""><input type="checkbox" required>Remember Me</label>
+              <a href="#">Forget Password</a>
+            </div>
+            <button>Log in</button>
+            <div class="register">
+                <p>Belum Punya Akun? <a href="register.html">Register disini</a></p>
+            </div>
+            <div class="back">
+                <a href="../index.html">
+                <button type="button" onclick="window.history.back();">Home</button>
+              </div>
+        </form>
+    </section>
+</body>
+</html>

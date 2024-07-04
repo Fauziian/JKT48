@@ -1,0 +1,170 @@
+/* Mengimpor font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0; /* Menghilangkan margin default pada semua elemen */
+  padding: 0; /* Menghilangkan padding default pada semua elemen */
+  box-sizing: border-box; /* Memastikan padding dan border dimasukkan dalam ukuran elemen */
+  font-family: 'poppins', sans-serif; /* Mengatur font default menjadi Poppins */
+}
+
+body {
+  display: flex; /* Mengatur layout flexbox pada body */
+  align-items: center; /* Menyelaraskan item ke tengah secara vertikal */
+  justify-content: center; /* Menyelaraskan item ke tengah secara horizontal */
+  min-height: 100vh; /* Mengatur tinggi minimal body 100% dari tinggi viewport */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(17, 4, 69, 0.5)), url(jkt481.jpeg); /* Menambahkan gradient dan gambar background */
+  background-repeat: no-repeat; /* Mengatur agar background tidak mengulang */
+}
+
+section {
+  position: relative; /* Mengatur posisi relatif */
+  max-width: 400px; /* Mengatur lebar maksimal 400px */
+  background-color: transparent; /* Latar belakang transparan */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Border semi-transparan */
+  border-radius: 20px; /* Border dengan sudut melengkung */
+  backdrop-filter: blur(55px); /* Efek blur pada latar belakang */
+  display: flex; /* Mengatur layout flexbox pada section */
+  justify-content: center; /* Menyelaraskan item ke tengah secara horizontal */
+  align-items: center; /* Menyelaraskan item ke tengah secara vertikal */
+  padding: 2rem 3rem; /* Padding di dalam section */
+}
+
+h1 {
+  font-size: 2rem; /* Ukuran font 2rem */
+  color: #fff; /* Warna teks putih */
+  text-align: center; /* Teks rata tengah */
+}
+
+.inputbox {
+  position: relative; /* Posisi relatif untuk elemen dalam inputbox */
+  margin: 30px 0; /* Margin vertikal 30px */
+  max-width: 310px; /* Lebar maksimal 310px */
+  border-bottom: 2px solid #fff; /* Border bawah putih */
+}
+
+.inputbox label {
+  position: absolute; /* Posisi absolut pada label */
+  top: 50%; /* Label berada di tengah vertikal */
+  left: 5px; /* Jarak label dari kiri 5px */
+  transform: translateY(-50%); /* Mengatur posisi label ke tengah vertikal */
+  color: #fff; /* Warna teks putih */
+  font-size: 1rem; /* Ukuran font 1rem */
+  pointer-events: none; /* Menonaktifkan interaksi pointer pada label */
+  transition: all 0.5s ease-in-out; /* Transisi untuk semua perubahan properti */
+}
+
+input:focus ~ label, 
+input:valid ~ label {
+  top: -5px; /* Label bergerak ke atas saat input fokus atau valid */
+}
+
+.inputbox input {
+  width: 100%; /* Lebar penuh input */
+  height: 60px; /* Tinggi input 60px */
+  background: transparent; /* Latar belakang transparan */
+  border: none; /* Tanpa border */
+  outline: none; /* Tanpa outline */
+  font-size: 1rem; /* Ukuran font 1rem */
+  padding: 0 35px 0 5px; /* Padding di dalam input */
+  color: #fff; /* Warna teks putih */
+}
+
+.inputbox ion-icon {
+  position: absolute; /* Posisi absolut pada ikon */
+  right: 8px; /* Jarak ikon dari kanan 8px */
+  color: #fff; /* Warna ikon putih */
+  font-size: 1.2rem; /* Ukuran
+  font-size: 1.2rem; /* Ukuran font ikon 1.2rem */
+  top: 20px; /* Jarak ikon dari atas 20px */
+}
+
+.forget {
+  margin: 35px 0; /* Margin vertikal 35px */
+  font-size: 0.85rem; /* Ukuran font 0.85rem */
+  color: #fff; /* Warna teks putih */
+  display: flex; /* Mengatur layout flexbox */
+  justify-content: space-between; /* Menyelaraskan item dengan jarak merata */
+}
+
+.forget label {
+  display: flex; /* Mengatur label dengan flexbox */
+  align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+}
+
+.forget label input {
+  margin-right: 3px; /* Margin kanan 3px */
+}
+
+.forget a {
+  color: #fff; /* Warna teks putih */
+  text-decoration: none; /* Menghilangkan dekorasi teks */
+  font-weight: 600; /* Ketebalan font 600 */
+}
+
+.forget a:hover {
+  text-decoration: underline; /* Garis bawah pada teks saat hover */
+}
+
+button {
+  width: 100%; /* Lebar penuh tombol */
+  height: 40px; /* Tinggi tombol 40px */
+  border-radius: 40px; /* Border radius 40px */
+  background-color: rgb(255, 255, 255, 1); /* Latar belakang putih penuh */
+  border: none; /* Tanpa border */
+  outline: none; /* Tanpa outline */
+  cursor: pointer; /* Kursor pointer */
+  font-size: 1rem; /* Ukuran font 1rem */
+  font-weight: 600; /* Ketebalan font 600 */
+  transition: all 0.4s ease; /* Transisi semua properti dalam 0.4 detik */
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255, 0.5); /* Latar belakang semi-transparan saat hover */
+}
+
+.register {
+  font-size: 0.9rem; /* Ukuran font 0.9rem */
+  color: #fff; /* Warna teks putih */
+  text-align: center; /* Teks rata tengah */
+  margin: 25px 0 10px; /* Margin atas 25px, bawah 10px */
+}
+
+.register p a {
+  text-decoration: none; /* Menghilangkan dekorasi teks */
+  color: #fff; /* Warna teks putih */
+  font-weight: 600; /* Ketebalan font 600 */
+}
+
+.register p a:hover {
+  text-decoration: underline; /* Garis bawah pada teks saat hover */
+}
+
+.login {
+  font-size: 0.9rem; /* Ukuran font 0.9rem */
+  color: #fff; /* Warna teks putih */
+  text-align: center; /* Teks rata tengah */
+  margin: 25px 0 10px; /* Margin atas 25px, bawah 10px */
+}
+
+.login p a {
+  text-decoration: none; /* Menghilangkan dekorasi teks */
+  color: #fff; /* Warna teks putih */
+  font-weight: 600; /* Ketebalan font 600 */
+}
+
+.login p a:hover {
+  text-decoration: underline; /* Garis bawah pada teks saat hover */
+}
+
+.back {
+  margin-top: 20px; /* Margin atas 20px */
+}
+
+.back button {
+  background-color: #d9534f; /* Warna latar belakang tombol merah */
+}
+
+.back button:hover {
+  background-color: #c9302c; /* Warna latar belakang tombol lebih gelap saat hover */
+}
