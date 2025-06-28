@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #0044cc;
+}
+
+p.venue, p.info, p.note {
+    text-align: center;
+}
+
+p.info span {
+    font-weight: bold;
+}
+
+.show-info, .members {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.breadcrumb a {
+    color: #ff0400;
+    text-decoration: none;
+}
+
+
+.breadcrumb-container {
+    display: flex;
+    justify-content: flex-start; /* Default alignment */
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    width: 76%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  
+  .breadcrumb span {
+    color: #ff0000;
+    cursor: pointer;
+  }
+  
+  .breadcrumb span:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb i {
+    margin-right: 5px;
+  }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.notice {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.notice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notice ul li {
+    margin-bottom: 10px;
+}
+
+.notice ul ul {
+    margin-top: 10px;
+}
+
+.notice a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.notice a:hover {
+    text-decoration: underline;
+}
+
+.left-align {
+    text-align: left;
+}

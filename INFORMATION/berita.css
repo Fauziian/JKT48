@@ -1,0 +1,532 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .breadcrumb-container {
+    display: flex;
+    justify-content: flex-start; /* Default alignment */
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    width: 76%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .breadcrumb span {
+    color: #000000;
+    cursor: pointer;
+  }
+
+  #breadcrumb-home i.fas.fa-home {
+    color: red; /* Mengatur warna logo rumah menjadi merah */
+  }
+  
+  .breadcrumb span:hover {
+    text-decoration: none;
+  }
+  
+  .breadcrumb i {
+    margin-right: 5px;
+  }
+  
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .content h1 {
+    margin-top: 0;
+  }
+  
+  .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .content ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1px;
+
+  }
+  
+  .news, .schedule {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .news h2, .schedule h2 {
+    background-color: #ffcce6;
+    padding: 10px;
+    color: #ee3333;
+    margin: 0;
+    border-bottom: 2px solid #e33;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .news ul, .schedule ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .news li, .schedule li {
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px dotted #ddd;
+  }
+  
+  .news li:last-child, .schedule li:last-child {
+    border-bottom: none;
+  }
+  
+  .news ul li a.text-color {
+    color: #ff6565; /* Warna teks aslinya */
+    text-decoration: none; /* Menghapus garis bawah */
+    transition: color 0.3s; /* Efek transisi untuk perubahan warna */
+  }
+  
+  .news ul li a.text-color:hover {
+    color: red; /* Warna teks berubah menjadi merah saat di-hover */
+    text-decoration: none; /* Tetap tidak ada garis bawah */
+    cursor: pointer; /* Tambahkan kursor pointer */
+  }
+  
+  .schedule ul li a.text-color {
+    color: #ff6565; /* Warna teks aslinya */
+    text-decoration: none; /* Menghapus garis bawah */
+    transition: color 0.3s; /* Efek transisi untuk perubahan warna */
+  }
+  
+  .schedule ul li a.text-color:hover {
+    color: red; /* Warna teks berubah menjadi merah saat di-hover */
+    text-decoration: none; /* Tetap tidak ada garis bawah */
+    cursor: pointer; /* Tambahkan kursor pointer */
+  }
+  
+  
+  .news .date, .schedule .date {
+    display: block;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .news a.text-color, .schedule a.text-color {
+    color: #e33;
+    text-decoration: none;
+  }
+  
+  .news .btn, .schedule .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f33;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  
+  .hover-text { 
+      opacity: 0; 
+      transition: opacity 0.3s ease-in-out; 
+    } 
+    
+    .card:hover .hover-text { 
+      opacity: 1; 
+    } 
+  
+    .breadcrumb a {
+      text-decoration: none; /* Menghilangkan garis bawah pada link dalam breadcrumb */
+      color: #d32f2f; /* Mengatur warna teks untuk link dalam breadcrumb menjadi merah gelap */
+  }
+    
+    
+    .image-container { 
+      position: relative; 
+      overflow: hidden; 
+    } 
+    
+    .image-container img { 
+      width: 100%; 
+      height: auto; 
+      max-height: 250px; 
+      object-fit: cover; 
+    } 
+  
+    .navbar-brand {
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space;
+    }
+    
+    .blur-overlay { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      border-radius: 8px 8px 0 0; 
+      opacity: 0; 
+      transition: opacity 0.3s ease-in-out; 
+    } 
+    
+    .card:hover .blur-overlay { 
+      opacity: 1; 
+    } 
+    
+    .card:hover .interaction-buttons { 
+      opacity: 1; 
+      transform: translate(-50%, -50%); 
+    } 
+    
+    .interaction-buttons { 
+      position: absolute; 
+      top: 20%; 
+      left: 35%; 
+      transform: translate(-50%, -50%); 
+      opacity: 0; 
+      transition: opacity 0.3s ease-in, transform 0.3s ease-in; 
+      cursor: pointer; 
+    } 
+    
+    .touch-button, 
+    .keyboard-button { 
+      padding: 10px 20px; 
+      margin: 5px; 
+      border-radius: 10px; 
+    } 
+    
+    .none-touch-button, 
+    .none-keyboard-button { 
+      padding: 10px 20px; 
+      margin: 5px; 
+      border-radius: 10px; 
+    } 
+    
+    .touch-button { 
+      background-color: red; 
+      color: white; 
+      border: none; 
+    } 
+    
+    .keyboard-button { 
+      background-color: white; 
+      color: red; 
+      border: none; 
+    } 
+    
+    
+    .card:hover .keyboard-button { 
+      animation: animate__zoomInRight 0.9s; 
+    } 
+    
+    @keyframes animate__zoomInRight { 
+      0% { 
+        opacity: 0; 
+        transform: translateX(50px) scale(0.8); 
+      } 
+      100% { 
+        opacity: 1; 
+        transform: translateX(0) scale(1); 
+      } 
+    } 
+    
+    .card:hover .touch-button { 
+      animation: animate__zoomInRight 0.9s; 
+    } 
+    
+    @keyframes animate__zoomInRight { 
+      0% { 
+        opacity: 0; 
+        transform: translateX(50px) scale(0.8); 
+      } 
+      100% { 
+        opacity: 1; 
+        transform: translateX(0) scale(1); 
+      } 
+    }
+  
+  
+  .news a.text-color {
+      color: rgb(255, 127, 127);
+  }
+  
+  .schedule a.text-color {
+    color: #f33;
+  }
+    
+    .sidebar {
+      width: 30%;
+      padding: 20px;
+      background-color: #fff;
+  }
+  
+  .main-content {
+    width: 70%;
+    padding: 20px;
+  }
+  
+  .main-content h2 {
+    background-color: #fdd;
+    padding: 10px;
+    color: #e33;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #e33;
+    text-align: center;
+  }
+  
+  .news ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .news li {
+      margin-bottom: 10px;
+  }
+  
+  .news .date {
+      display: block;
+      color: #302f2f;
+      font-size: 0.9em;
+      margin-top: 2px;
+  }
+  
+  
+  .news-item {
+      border-bottom: 1px dotted #ccc;
+      padding: 10px 0;
+      margin-bottom: 10px;
+  }
+  
+  .news-item h3 {
+      color: #666;
+      font-size: 14px;
+      margin: 0 0 5px 0;
+  }
+  
+  .news-item p {
+      margin: 5px 0;
+      color: #333;
+  }
+  
+  .news-item p:first-of-type {
+      color: rgb(255, 0, 0);
+  }
+  
+  .news-item .date {
+      color: #999;
+      font-size: 0.9em;
+  }
+  
+  .news-container {
+    margin-bottom: 20px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  .pagination button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #ccc;
+  }
+  
+  #page-info {
+    margin: 0 100px;
+  }
+  
+  /* Animasi untuk pencarian */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s ease forwards;
+  }
+  
+  /* Efek transisi smooth */
+  .news-container .news-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .news-container .news-item:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  
+  /* Animasi perubahan halaman */
+  .pagination button {
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #ccc;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.news-container {
+    margin-top: 20px;
+}
+.news-container header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.news-container header h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.news-container header p {
+    color: #666;
+    font-size: 0.9em;
+}
+.news-container section p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.news-container section h2 {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #333;
+}
+.news-container section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.news-container section ul li {
+    margin-bottom: 5px;
+}
+.news-container section ul li strong {
+    color: #000;
+}
+.text-color {
+    color: #007bff;
+    text-decoration: none;
+}
+.text-color:hover {
+    text-decoration: underline;
+}
+
+.image-item {
+  max-width: 100%;
+  height: auto;
+}
+
+footer{
+  /* height:200px; */
+  margin-top: 20px; /* Menambahkan margin atas sebesar 20px */
+  background-color: rgb(0, 0, 0); /* Mengatur warna latar belakang footer menjadi hitam */
+}
+
+.footer{
+  color: aliceblue; /* Mengatur warna teks footer menjadi putih kebiruan */
+  text-align: center; /* Mengatur teks dalam footer agar rata tengah */
+  padding: 20px; /* Menambahkan padding sebesar 20px di semua sisi */
+  padding-left: 133px; /* Menambahkan padding kiri negatif untuk menyesuaikan layout */
+  display: flex; /* Mengatur konten menggunakan flexbox */
+  flex-wrap: nowrap; /* Membuat konten tidak membungkus ke baris baru */
+  margin-top: 8px; /* Menambahkan margin atas sebesar 100px */
+}
+
+.buttons{
+  text-align: center; /* Mengatur teks dalam buttons agar rata tengah */
+}
+
+.month{
+  text-align: center; /* Mengatur teks dalam month agar rata tengah */
+}
+
+.ig{
+  text-align: center; /* Mengatur teks dalam ig agar rata tengah */
+}
+
+.logofot{
+  height: 150px; /* Mengatur tinggi logo footer */
+  width: auto; /* Mengatur lebar logo footer secara otomatis sesuai aspek rasio */
+}
+
+a{
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: aliceblue; /* Mengatur warna teks link menjadi putih kebiruan */
+}
+
+.tabel{
+  width: 75%; /* Mengatur lebar tabel menjadi 75% dari kontainer induknya */
+}
+
+.logo{
+  width: 15%; /* Mengatur lebar logo menjadi 15% dari kontainer induknya */
+  margin-right: 50px; /* Menambahkan margin kanan sebesar 50px */
+}
+
+.igdkk{
+  padding-bottom: 70px; /* Menambahkan padding bawah sebesar 70px */
+}
+
+footer a:hover{
+  color: aqua; /* Mengubah warna teks link dalam footer menjadi aqua saat hover */
+}
+  

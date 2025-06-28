@@ -1,0 +1,160 @@
+/* body */
+body{
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,1)),url(image/tiket.jpg); */
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* navbar */
+nav{
+    height: 83px;
+    background-color: rgb(0, 0, 0)
+}
+
+.innav{
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* main */
+main{
+    /* height: 800px; */
+    /* background-color: rgb(252, 6, 6); */
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.judul{
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gambartiket{
+    /* border: 2px solid black; */
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    width: 1300px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.didalem{
+   justify-content: center;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.card{
+    margin: 10px;
+}
+
+.buy{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 5px;
+    /* margin-left: 90px; */
+}
+
+.miring{
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.bawahjudul{
+    display: flex;
+    justify-content: center;
+}
+
+a:hover{
+    color: black;
+}
+
+a p:hover{
+    color: red;
+}
+
+
+main section{
+    margin-top: 30px;
+    height: 650px;
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* padding-top: px; */
+    /* border: 10px solid green; */
+    /* background-color: rgb(20, 0, 0); */
+}
+
+
+/* footer */
+footer{
+    /* height:200px; */
+    margin-top: 20px; /* Menambahkan margin atas sebesar 20px */
+    background-color: rgb(0, 0, 0); /* Mengatur warna latar belakang footer menjadi hitam */
+  }
+  
+  .footer{
+    color: aliceblue; /* Mengatur warna teks footer menjadi putih kebiruan */
+    text-align: center; /* Mengatur teks dalam footer agar rata tengah */
+    padding: 20px; /* Menambahkan padding sebesar 20px di semua sisi */
+    padding-left: 133px; /* Menambahkan padding kiri negatif untuk menyesuaikan layout */
+    display: flex; /* Mengatur konten menggunakan flexbox */
+    flex-wrap: nowrap; /* Membuat konten tidak membungkus ke baris baru */
+    margin-top: 8px; /* Menambahkan margin atas sebesar 100px */
+  }
+  
+  .buttons{
+    text-align: center; /* Mengatur teks dalam buttons agar rata tengah */
+  }
+  
+  .month{
+    text-align: center; /* Mengatur teks dalam month agar rata tengah */
+  }
+  
+  .ig{
+    text-align: center; /* Mengatur teks dalam ig agar rata tengah */
+  }
+  
+  .logofot{
+    height: 150px; /* Mengatur tinggi logo footer */
+    width: auto; /* Mengatur lebar logo footer secara otomatis sesuai aspek rasio */
+  }
+  
+  a{
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: aliceblue; /* Mengatur warna teks link menjadi putih kebiruan */
+  }
+  
+  .tabel{
+    width: 75%; /* Mengatur lebar tabel menjadi 75% dari kontainer induknya */
+  }
+  
+  .logo{
+    width: 15%; /* Mengatur lebar logo menjadi 15% dari kontainer induknya */
+    margin-right: 50px; /* Menambahkan margin kanan sebesar 50px */
+  }
+  
+  .igdkk{
+    padding-bottom: 70px; /* Menambahkan padding bawah sebesar 70px */
+  }
+  
+  footer a:hover{
+    color: aqua; /* Mengubah warna teks link dalam footer menjadi aqua saat hover */
+  }
+

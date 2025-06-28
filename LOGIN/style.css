@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(17, 4, 69, 0.5)), url(jkt481.jpeg);
+    background-repeat: no-repeat;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.inputbox label {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333333;
+    padding: 0 45px 0 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputbox input:focus {
+    border-color: #0d6efd; 
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+.inputbox input::placeholder {
+    color: #a9a9a9;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 15px; /* Disesuaikan agar pas */
+    bottom: 15px; /* Disesuaikan agar pas */
+    color: #555555;
+    font-size: 1.2rem;
+}
+
+
+/* --- KODE TAMBAHAN UNTUK MENGATASI WARNA KUNING AUTOFILL --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #333; /* Memastikan warna teks tetap gelap */
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset; /* Trik untuk menimpa background kuning dengan warna putih */
+    transition: background-color 5000s ease-in-out 0s; /* Mencegah transisi warna dari browser */
+    font-family: 'poppins', sans-serif; /* Memastikan font tetap sama saat autofill */
+}
+
+
+.forget {
+    font-size: 0.9rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.forget label input {
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+}
+
+.forget a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+button, .home-button {
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+button {
+    background-color: #fff;
+    color: #1a0b3d;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.register, .login { /* Style digabung untuk register dan login link */
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register p a, .login p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover, .login p a:hover {
+    text-decoration: underline;
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #c9302c;
+}

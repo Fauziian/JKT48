@@ -1,0 +1,264 @@
+/* body */
+body{
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,1)),url(image/tiket.jpg); */
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+
+/* navbar */
+nav{
+  height: 83px;
+  background-color: rgb(0, 0, 0)
+}
+
+.innav{
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+/* main */
+main{
+  /* height: 800px; */
+  /* background-color: rgb(136, 72, 72); */
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.judul{
+  padding-top: 30px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.kotakdalam{
+  /* border: 2px solid black; */
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+main {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.kotakkiri{
+  /* background-color: aqua; */
+  border: 1px solid black;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+
+.kotakkanan{
+  /* background-color: bisque; */
+  padding-top: 50px;
+  line-height: 1.5;
+}
+
+.buy{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.pembelian{
+  line-height: 0.7;
+}
+
+.gambar{
+  width: 474px;
+  height: 314px;
+}
+
+
+
+
+a:hover{
+  color: red;
+}
+
+/* footer */
+footer{
+  /* height:200px; */
+  margin-top: 20px; /* Menambahkan margin atas sebesar 20px */
+  background-color: rgb(0, 0, 0); /* Mengatur warna latar belakang footer menjadi hitam */
+}
+
+.footer{
+  color: aliceblue; /* Mengatur warna teks footer menjadi putih kebiruan */
+  text-align: center; /* Mengatur teks dalam footer agar rata tengah */
+  padding: 20px; /* Menambahkan padding sebesar 20px di semua sisi */
+  padding-left: 133px; /* Menambahkan padding kiri negatif untuk menyesuaikan layout */
+  display: flex; /* Mengatur konten menggunakan flexbox */
+  flex-wrap: nowrap; /* Membuat konten tidak membungkus ke baris baru */
+  margin-top: 8px; /* Menambahkan margin atas sebesar 100px */
+}
+
+.buttons{
+  text-align: center; /* Mengatur teks dalam buttons agar rata tengah */
+}
+
+.month{
+  text-align: center; /* Mengatur teks dalam month agar rata tengah */
+}
+
+.ig{
+  text-align: center; /* Mengatur teks dalam ig agar rata tengah */
+}
+
+.logofot{
+  height: 150px; /* Mengatur tinggi logo footer */
+  width: auto; /* Mengatur lebar logo footer secara otomatis sesuai aspek rasio */
+}
+
+a{
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: aliceblue; /* Mengatur warna teks link menjadi putih kebiruan */
+}
+
+.tabel{
+  width: 75%; /* Mengatur lebar tabel menjadi 75% dari kontainer induknya */
+}
+
+.logo{
+  width: 15%; /* Mengatur lebar logo menjadi 15% dari kontainer induknya */
+  margin-right: 50px; /* Menambahkan margin kanan sebesar 50px */
+}
+
+.igdkk{
+  padding-bottom: 70px; /* Menambahkan padding bawah sebesar 70px */
+}
+
+footer a:hover{
+  color: aqua; /* Mengubah warna teks link dalam footer menjadi aqua saat hover */
+}
+
+    /* Style for the modal (popup) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Additional styles for form */
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      min-height: 100vh;
+      /* background: rgba(0, 0, 0, .8); */
+      padding-bottom: 70px;
+  }
+  
+  .container form{
+      padding: 20px;
+      width: 700px;
+      background: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+  }
+  
+  .container form .row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
+  
+  .container form .row .col{
+      flex: 1 1 250px;
+  }
+  
+  .container form .row .col .tittle{
+      font-size: 20px;
+      color: #333;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+  }
+  
+  .container form .row .col .inputbox{
+      margin: 15px 0;
+  }
+  
+  .container form .row .col .inputbox span{
+      margin-bottom: 5px;
+      display: block;
+  }
+  
+  .container form .row .col .inputbox input{
+      width: 100%;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      font-size: 15px;
+      text-transform: none;
+  }
+  
+  .container form .row .col .inputbox input:focus{
+      border: 1px solid #000;
+  }
+  
+  .container form .row .col .inputbox img{
+      height: 34px;
+      margin-top: 5px;
+      filter: drop-shadow(0 0 0 1px #000);
+  }
+  
+  .container form .submit-btn{
+      width: 100%;
+      padding: 12px;
+      font-size: 17px;
+      background: #27ae60;
+      color: #fff;
+      margin-top: 20px;
+      cursor: pointer;
+  }
+  
+  .container form .submit-btn:hover{
+      background: #2ecc71;
+  }
+  
+  .container form .row .col .harga{
+      padding-top: 10px;
+      font-family: 'Times New Roman', Times, serif;
+      
+  }
